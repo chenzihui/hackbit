@@ -1,0 +1,404 @@
+/* ------------------------------ *\
+   Generic Helpers
+\* ------------------------------ */
+
+* {
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* For sticky footer */
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/**
+ * For clearing floats. This is the same as the common `.clearfix` class but
+ * adopting `group` as a more semantic name.
+ **/
+
+.group {
+  *zoom: 1;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+/**
+ * Paddings and margins
+ **/
+
+.space {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.space-small {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.space-large {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.space-xlarge {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.breathe {
+  padding: 5px;
+}
+
+.breathe-large {
+  padding: 10px;
+}
+
+/**
+ * Other common use cases
+ **/
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/* ------------------------------ *\
+   Links
+\* ------------------------------ */
+
+a {
+  text-decoration: none;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* ------------------------------ *\
+   Scaffolding
+\* ------------------------------ */
+
+/**
+ * For use with a sticky footer
+ * To be used along with `.center-block`
+ **/
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -60px; /* Size is the same as the height of your footer */
+  min-height: 100%;
+}
+
+.push,
+.site-footer {
+  height: 60px;
+}
+
+.box {
+  border: 1px solid #ddd;
+}
+
+.underline {
+  border-bottom: 1px solid #ddd;
+}
+
+.underline-dashed {
+  border-bottom: 1px dashed #ddd;
+}
+
+/* ------------------------------ *\
+   The Grid
+\* ------------------------------ */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+}
+
+/**
+ * Represents a single row in the grid.
+ * Remember to tack on `.group` to clear the floats made by the columns.
+ **/
+
+.row {
+  margin-left: -20px;
+}
+
+.column-1 {
+  width: 60px;
+}
+
+.column-2 {
+  width: 140px;
+}
+
+.column-3 {
+  width: 220px;
+}
+
+.column-4 {
+  width: 300px;
+}
+
+.column-5 {
+  width: 380px;
+}
+
+.column-6 {
+  width: 460px;
+}
+
+.column-7 {
+  width: 540px;
+}
+
+.column-8 {
+  width: 620px;
+}
+
+.column-9 {
+  width: 700px;
+}
+
+.column-10 {
+  width: 780px;
+}
+
+.column-11 {
+  width: 860px;
+}
+
+.column-12 {
+  width: 940px;
+}
+
+[class*="column"] {
+  float: left;
+  margin-left: 20px;
+}
+
+/**
+ * TODO: Options to offset the column(s)?
+ **/
+
+/* ------------------------------ *\
+   Media Object
+\* ------------------------------ */
+
+/**
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ **/
+
+.media {}
+
+.media .img {
+  float: left;
+  margin-right: 10px;
+}
+
+.media .bd {
+  overflow: hidden;
+}
+
+.media .img-ext {
+  float: right;
+  margin-left: 10px;
+}
+
+/* ------------------------------ *\
+   Typography
+\* ------------------------------ */
+
+/**
+ * Based on a Modular Scale using 14px and 44px as the key values
+ * http://modularscale.com/scale/?px1=14&px2=44&ra1=1.618&ra2=0
+ *
+ * Add in `line-height` if you are aiming for a baseline rhythm.
+ **/
+
+.ms1 {
+  font-size: 44px;
+}
+
+.ms2 {
+  font-size: 37px;
+}
+
+.ms3 {
+  font-size: 27px;
+}
+
+.ms4 {
+  font-size: 23px;
+}
+
+.ms5 {
+  font-size: 17px;
+}
+
+.ms6 {
+  font-size: 14px;
+}
+
+.ms7 {
+  font-size: 10px;
+}
+
+.uppercase {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ------------------------------ *\
+   Forms
+\* ------------------------------ */
+
+.user-input {
+  box-shadow: 0 0 6px rgba(0,0,0,.15);
+  line-height: 3;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.form-horizontal .user-input,
+.form-horizontal label {
+  float: left;
+}
+
+.form-horizontal .user-input {
+  margin-left: 10px;
+}
+
+.form-horizontal label {
+  text-align: right;
+}
+
+.form-stack label,
+.form-stack .user-input {
+  display: block;
+}
+
+.form-stack label {
+  margin-bottom: 3px;
+}
+
+/* ------------------------------ *\
+   Buttons
+\* ------------------------------ */
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 3;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* ------------------------------ *\
+   Lists
+\* ------------------------------ */
+
+.inline-list {
+  list-style-type: none;
+}
+
+.inline-list > li {
+  float: left;
+  margin-right: 1em;
+  width: auto;
+}
+
+.inline-list > li:last-child {
+  margin-right: 0;
+}
+
+.inline-list.pipe > li:after {
+  content: "|";
+  margin-left: 1em;
+}
+
+.inline-list.pipe > li:last-child:after {
+  content: "";
+}
+
+/* ------------------------------ *\
+   CSS3 Helpers
+\* ------------------------------ */
+
+.soft {
+  border-radius: 3px;
+}
+
+.softer {
+  border-radius: 6px;
+}
+
+.pill {
+  border-radius: 30px;
+}
+
+.pop {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.2);
+}
+
+.gradient {
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image:    -moz-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image:     -ms-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image:      -o-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0));
+}
+
+/* ------------------------------ *\
+   Colors
+\* ------------------------------ */
+
+/**
+ * Leaving this portion out for you to add in your branding materials
+ *
+ * For example:
+ *
+ * .bg-grey { background-color: #eee; border: 1px solid #ddd;}
+ * .text-grey { color: #999;}
+ **/
