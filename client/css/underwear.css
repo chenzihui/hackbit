@@ -435,6 +435,11 @@ a:visited {
  * .text-grey { color: #999;}
  **/
 
- .bg-grey {
+.bg-grey {
   background-color: #f2f4f6;
- }
+}
+
+.bg-error {
+  background-color: #ffebe8;
+  border: 1px solid #dd3c10;
+}

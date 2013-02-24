@@ -4,6 +4,16 @@
             <div class="column-6">
                 <h2 class="ms2 space-large">Create a new account</h2>
 
+                {{#if errors}}
+                <div class="bg-error soft breathe">
+                    <ul class="bullet-list">
+                    {{#each errors}}
+                        <li>{{ this }}</li>
+                    {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+
                 <form id="reg-form" class="form-stack">
                     <fieldset class="space">
                         <label for="username">Username</label>
