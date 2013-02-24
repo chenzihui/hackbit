@@ -1,4 +1,6 @@
 /**
+ * @router.js
+ *
  * Routes for the application are defined here using Meteor-Router
  **/
 
