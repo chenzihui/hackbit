@@ -1,6 +1,11 @@
 <template name="navBar">
-    <ul class="inline-list pipe group ms6 pull-right">
+    <ul class="inline-list pipe group ms6 pull-right breathe-large">
+        {{#if currentUser}}
+        <li><a href="/user">My HackBits</a></li>
+        <li><a href="#">Sign Out</a></li>
+        {{else}}
         <li><a href="/login">Sign In</a></li>
         <li><a href="/register">Register</a></li>
+        {{/if}}
     </ul>
 </template>
