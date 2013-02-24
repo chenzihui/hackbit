@@ -3,5 +3,8 @@
  **/
 
 Meteor.Router.add({
-  '/': 'home'
+  '/': 'home',
+
+  '/register': 'register',
+  '/login': 'login'
 });
