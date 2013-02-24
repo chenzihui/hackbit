@@ -23,7 +23,7 @@ Template.login.events = {
           Session.set( 'errors', 'Invalid user / email combination. Please try again.');
         }
         else {
-          console.log('Signed in');
+          Meteor.Router.to( '/user' );
         }
       });
     }

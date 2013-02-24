@@ -26,7 +26,7 @@ Template.register.events = {
     if( _.isEmpty(errorMsgs) ) {
       Accounts.createUser( options, function( err ) {
         // TODO: Validaton for already existing emails & usernames
-        console.log('Account created');
+        Meteor.Router.to( '/user' );
       });
     } else {
       Session.set( 'regErrors', errorMsgs );
