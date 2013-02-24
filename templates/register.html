@@ -4,10 +4,10 @@
             <div class="column-6">
                 <h2 class="ms2 space-large">Create a new account</h2>
 
-                {{#if errors}}
+                {{#if regErrors}}
                 <div class="bg-error soft breathe">
-                    <ul class="bullet-list">
-                    {{#each errors}}
+                    <ul>
+                    {{#each regErrors}}
                         <li>{{ this }}</li>
                     {{/each}}
                     </ul>

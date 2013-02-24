@@ -4,15 +4,23 @@
             <div class="column-6">
                 <h2 class="ms2 space-large">Welcome Back!</h2>
 
+                {{#if loginError}}
+                <div class="bg-error soft breathe">
+                    <p class="no-mar">{{ loginError }}</p>
+                </div>
+                {{/if}}
+
                 <form id="login-form" class="form-stack">
                     <fieldset class="space">
                         <label for="user">Username or Email Address</label>
-                        <input class="user-input soft" type="text" name="user" placeholder="JohnDoe">
+                        <input id="login-user" class="user-input soft" type="text"
+                        name="user" placeholder="JohnDoe">
                     </fieldset>
 
                     <fieldset class="space">
                         <label for="password">Password</label>
-                        <input class="user-input soft" type="text" name="password" placeholder="Top Secret">
+                        <input id="login-pw" class="user-input soft" type="password"
+                        name="password" placeholder="Top Secret">
                     </fieldset>
 
                     <button class="btn soft" type="submit">Sign In</button>

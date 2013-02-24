@@ -11,6 +11,8 @@ Template.register.events = {
   'submit #reg-form': function( evt ) {
     evt.preventDefault();
 
+    Session.set( 'regErrors', undefined );
+
     // Get the user input values from the form
     var options = {
       username: $( '#reg-username' ).val(),
@@ -22,13 +24,12 @@ Template.register.events = {
     var errorMsgs = validateReg( options );
 
     if( _.isEmpty(errorMsgs) ) {
-      Session.set( 'regError', undefined );
-
       Accounts.createUser( options, function( err ) {
+        // TODO: Validaton for already existing emails & usernames
         console.log('Account created');
       });
     } else {
-      Session.set( 'regError', errorMsgs );
+      Session.set( 'regErrors', errorMsgs );
     }
   }
 };
@@ -36,8 +37,8 @@ Template.register.events = {
 // Template Helpers
 // ------------------------------
 
-Template.register.errors = function() {
-  return Session.get( 'regError' );
+Template.register.regErrors = function() {
+  return Session.get( 'regErrors' );
 };
 
 /*
