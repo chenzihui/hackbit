@@ -1,3 +1,25 @@
 <template name="user">
+    <div class="container">
+        <div class="row group">
+            <div class="column-8">
+                <form id="habit-form">
+                    <input class="user-input input-large soft" type="text" name="habit"
+                    placeholder="Add a new habit. E.g. Stop smoking">
 
+                    <button class="btn soft" type="submit">Add Habit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row group space">
+            {{#if habits}}
+
+            {{else}}
+            <div class="column-8 box soft bg-white breathe">
+                <p class="no-mar">You have not added any habits yet!</p>
+                <p class="no-mar">Use the form above to add some habits you would like to create and / or ditch.</p>
+            </div>
+            {{/if}}
+        </div>
+    </div>
 </template>
