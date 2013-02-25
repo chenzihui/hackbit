@@ -20,7 +20,7 @@ Template.login.events = {
     if ( user && password ) {
       Meteor.loginWithPassword( user, password, function( err ) {
         if ( err ) {
-          Session.set( 'errors', 'Invalid user / email combination. Please try again.');
+          Session.set( 'loginError', 'Invalid user / email combination. Please try again.');
         }
         else {
           Meteor.Router.to( '/user' );
