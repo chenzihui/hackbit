@@ -8,12 +8,17 @@ Template.habits.events = {
   'submit #habit-form': function( evt ) {
     evt.preventDefault();
 
-    var name   = $( '#new-habit' ).val(),
-        userId = Meteor.userId;
+    var name      = $( '#new-habit' ).val(),
+        userId    = Meteor.userId,
+        timestamp = ( new Date() ).getTime(),
+        streak    = 0;
 
     Habits.insert({
       userId: userId,
-      name: name
+      name: name,
+      timestamp: timestamp,
+      days: [],
+      streak: streak
     }, function( err ) {
       $( '#new-habit' ).val( '' );
     });
@@ -27,5 +32,5 @@ Template.habits.hasHabits = function() {
 };
 
 Template.habits.habits = function() {
-  return Habits.find( {}, { sort: { name: 1 } } );
+  return Habits.find( {}, { sort: { timestamp: 1 } } );
 };
