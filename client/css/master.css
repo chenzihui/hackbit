@@ -35,3 +35,12 @@ ul {
 .habit-action:hover {
   color: #333;
 }
+
+.clicked {
+  background-color: #e5f4e5;
+}
+
+.clicked .habit-action.done {
+  background-color: #46a546;
+  color: #fff;
+}

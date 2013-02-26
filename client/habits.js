@@ -25,6 +25,10 @@ Template.habits.events = {
   }
 };
 
+Template.habits.today = function() {
+  return new Date();
+};
+
 Template.habits.hasHabits = function() {
   var habits = Habits.find();
 
@@ -32,5 +36,5 @@ Template.habits.hasHabits = function() {
 };
 
 Template.habits.habits = function() {
-  return Habits.find( {}, { sort: { timestamp: 1 } } );
+  return Habits.find( {}, { sort: { timestamp: -1 } } );
 };

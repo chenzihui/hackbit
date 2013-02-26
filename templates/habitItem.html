@@ -1,8 +1,9 @@
 <template name="habitItem">
-    <div class="soft bg-white box breathe space-large">
+    <div class="soft box breathe space {{ hasClick }}">
         <div class="media group">
             <div class="img">
                 <p class="no-mar uppercase"><strong>{{ name }}</strong></p>
+                <p class="no-mar">Days in a row: {{ streak }}</p>
             </div>
 
             <div class="img-ext">
