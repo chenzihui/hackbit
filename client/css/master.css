@@ -13,12 +13,20 @@ ul {
   padding: 0;
 }
 
+a {
+  color: #05a9e3;
+}
+
 /* ------------------------------ *\
    UI Specifics
 \* ------------------------------ */
 
 .brand {
   font-weight: 900;
+}
+
+.brand a {
+  color: #333;
 }
 
 .no-mar {
