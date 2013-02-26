@@ -24,3 +24,14 @@ ul {
 .no-mar {
   margin: 0;
 }
+
+.habit-action {
+  color: #999;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.habit-action:hover {
+  color: #333;
+}

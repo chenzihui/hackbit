@@ -1,12 +1,10 @@
 /**
- * @user.js
+ * @habits.js
  *
  * Functionality for the user profile page
  **/
 
-Habits = new Meteor.Collection( 'habits' );
-
-Template.user.events = {
+Template.habits.events = {
   'submit #habit-form': function( evt ) {
     evt.preventDefault();
 
@@ -22,12 +20,12 @@ Template.user.events = {
   }
 };
 
-Template.user.hasHabits = function() {
+Template.habits.hasHabits = function() {
   var habits = Habits.find();
 
   return habits.count();
 };
 
-Template.user.habits = function() {
+Template.habits.habits = function() {
   return Habits.find( {}, { sort: { name: 1 } } );
 };

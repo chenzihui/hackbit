@@ -10,5 +10,5 @@ Meteor.Router.add({
   '/register': 'register',
   '/login': 'login',
 
-  '/user': 'user'
+  '/habits': 'habits'
 });

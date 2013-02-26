@@ -1,4 +1,4 @@
-<template name="user">
+<template name="habits">
     <div class="container">
         <div class="row group">
             <div class="column-8">
@@ -12,12 +12,14 @@
         </div>
 
         <div class="row group space">
-            <div class="column-8 box soft bg-white breathe">
             {{#if hasHabits}}
+            <div class="column-8">
                 {{#each habits}}
-                <p class="no-mar">{{ name }}</p>
+                    {{>habitItem}}
                 {{/each}}
+            </div>
             {{else}}
+            <div class="column-8 box soft bg-white breathe">
                 <p class="no-mar">You have not added any habits yet!</p>
                 <p class="no-mar">Use the form above to add some habits you would like to create and / or ditch.</p>
             {{/if}}
