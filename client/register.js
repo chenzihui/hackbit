@@ -26,7 +26,7 @@ Template.register.events = {
     if( _.isEmpty(errorMsgs) ) {
       Accounts.createUser( options, function( err ) {
         // TODO: Validaton for already existing emails & usernames
-        Meteor.Router.to( '/user' );
+        Meteor.Router.to( '/habits' );
       });
     } else {
       Session.set( 'regErrors', errorMsgs );
