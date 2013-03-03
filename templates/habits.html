@@ -7,13 +7,13 @@
                     <input id="new-habit" class="user-input input-large soft" type="text"
                     name="habit" placeholder="Add a new habit. E.g. Stop smoking">
 
-                    <button class="btn soft" type="submit">Add Habit</button>
+                    <button id="add-habit-btn" class="btn soft" type="submit">Add Habit</button>
                 </form>
             </div>
         </div>
 
         <div class="row group space">
-            {{#if hasHabits}}
+            {{#if hasHabits.count}}
             <div class="column-8">
                 {{#each habits}}
                     {{>habitItem}}

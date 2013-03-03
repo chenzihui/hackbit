@@ -23,7 +23,13 @@
                         name="password" placeholder="Top Secret">
                     </fieldset>
 
-                    <button class="btn soft" type="submit">Sign In</button>
+                    <button class="btn soft" type="submit">
+                        {{#if loggingIn}}
+                        Loading&hellip;
+                        {{else}}
+                        Sign In
+                        {{/if}}
+                    </button>
                 </form>
             </div>
         </div>

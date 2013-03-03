@@ -5,9 +5,7 @@
  **/
 
 if ( Meteor.userId() ) {
-  Meteor.autorun(function() {
-    Meteor.subscribe( 'habits', Meteor.userId() );
-  });
+  Meteor.subscribe( 'habits', Meteor.userId() );
 }
 
 Template.habits.events = {
@@ -36,9 +34,7 @@ Template.habits.today = function() {
 };
 
 Template.habits.hasHabits = function() {
-  var habits = Habits.find({ userId: Meteor.userId() });
-
-  return habits.count();
+  return Habits.find({ userId: Meteor.userId() });
 };
 
 Template.habits.habits = function() {
